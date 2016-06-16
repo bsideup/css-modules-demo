@@ -1,0 +1,59 @@
+.wrapper {
+  composes: wrapper from "../../styles/layouts/centered.less";
+}
+
+.form {
+  composes: panel from "../../styles/panel.less";
+
+  text-align: center;
+  padding: 45px;
+  padding-top: 0;
+  width: 260px;
+}
+
+.header {
+  color: #7E7E7E;
+
+  position: relative;
+
+  &:before {
+    content: " ";
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    width: 120px;
+
+    background: -webkit-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+
+  &:after {
+    content: " ";
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 180px;
+    width: 120px;
+
+    background: -webkit-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+}
+
+.commonInput {
+  composes: normal from "../../styles/input.less";
+  width: 100%;
+}
+
+.normalInput {
+  composes: commonInput;
+  outline: 0;
+}
+
+.invalidInput {
+  composes: commonInput;
+  border: 1px solid red;
+}
+
+.loginButton {
+  composes: normal from "../../styles/button.less";
+}
